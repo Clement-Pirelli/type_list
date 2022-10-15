@@ -60,6 +60,10 @@ static_assert(empty::length == 0u);
 //map
 using bool_list = type_list<bool, bool, bool>;
 static_assert(std::is_same_v<map_t<ConstBool, varied_list>, bool_list>);
+enum First : int;
+enum Second : unsigned int;
+enum Third : char;
+static_assert(std::is_same_v<map_t<std::underlying_type, type_list<First, Second, Third>>, type_list<int, unsigned int, char>>);
 
 using wrapped_varied_list = type_list<WrapType<int>, WrapType<float>, WrapType<bool>>;
 static_assert(std::is_same_v<map_t<UnwrapType, wrapped_varied_list>, varied_list>);
