@@ -2,7 +2,7 @@
 
 It follows the shape of Haskell's `List`, but for C++ types. 
 
-List operations like folding, mapping, filtering, contatenation and more are available, so you can write code like this:
+List operations like folding, mapping, filtering, concatenation and more are available, so you can write code like this:
 
 ```cpp
 auto my_lambda = [](bool b, SomeType s, int i){ /*stuff here*/ };
